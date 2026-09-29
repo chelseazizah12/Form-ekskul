@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran Ekskul - SMK Letris Pamulang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Pendaftaran Ekskul<br>SMK Letris Pamulang</h1>
+
+    <form id="formEkskul" novalidate>
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" placeholder="Masukkan nama siswa">
+
+      <label>Kelas:</label>
+      <div class="radio-group">
+        <label class="radio"><input type="radio" name="kelas" value="X"> X</label>
+        <label class="radio"><input type="radio" name="kelas" value="XI"> XI</label>
+        <label class="radio"><input type="radio" name="kelas" value="XII"> XII</label>
+      </div>
+
+      <label for="jurusan">Jurusan:</label>
+      <select id="jurusan">
+        <option value="">-- Pilih Jurusan --</option>
+        <option value="PPLG">PPLG</option>
+        <option value="DKV">DKV</option>
+        <option value="TJKT">TJKT</option>
+        <option value="AKL">AKL</option>
+        <option value="BDP">BDP</option>
+        <option value="MPLB">MPLB</option>
+      </select>
+
+
+      
+      <label for="ekskul">Pilihan Ekskul:</label>
+      <select id="ekskul">
+        <option value="">-- Pilih Ekstrakurikuler --</option>
+        <option value="animasi">animasi</option>
+        <option value="paskibra">paskibra</option>
+        <option value="volly">volly</option>
+        <option value="basket">basket</option>
+        <option value="futsal">futsal</option>
+        <option value="letsin">letsin</option>
+        <option value="pmr">pmr</option> 
+        <option value="dance modern">dance modern</option>
+      </select>
+
+      <p id="pesan" class="pesan" role="alert"></p>
+
+      <button type="submit" id="btnSubmit" class="btn-tambah">Tambah Data</button>
+      <button type="button" id="btnBatal" class="btn-batal" hidden>Batal</button>
+    </form>
+
+    <h2>Data Pendaftaran Siswa</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Jurusan</th>
+            <th>Ekskul</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tabelBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
